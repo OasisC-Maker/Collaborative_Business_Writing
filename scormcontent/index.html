@@ -7,9 +7,9 @@
 
     <title>Collaborative Business Writing </title>
 
-    <link type="text/css" rel="stylesheet" href="https://oasisc-maker.github.io/Collaborative_Business_Writing/scormcontent/lib/icomoon.css">
-    <script type="text/javascript" src="https://oasisc-maker.github.io/Collaborative_Business_Writing/scormcontent/lib/player-0.0.11.min.js"></script>
-    <script type="text/javascript" src="https://oasisc-maker.github.io/Collaborative_Business_Writing/scormcontent/lib/lzwcompress.js"></script>
+    <link type="text/css" rel="stylesheet" href="lib/icomoon.css">
+    <script type="text/javascript" src="lib/player-0.0.11.min.js"></script>
+    <script type="text/javascript" src="lib/lzwcompress.js"></script>
 
     <!-- Resize Hack -->
     <script type="text/javascript">
@@ -42,7 +42,7 @@
                 link.onload = resolve
                 link.onerror = reject
                 link.rel = 'stylesheet'
-                link.href = 'https://oasisc-maker.github.io/Collaborative_Business_Writing/scormcontent/lib/' + manifest['.css'][idx]
+                link.href = 'lib/' + manifest['.css'][idx]
                 document.body.appendChild(link)
               }))
             }
