@@ -7,9 +7,9 @@
 
     <title>Collaborative Business Writing </title>
 
-    <link type="text/css" rel="stylesheet" href="https://oasisc-maker.github.io/Collaborative_Business_Writing/scormcontent/lib/icomoon.css">
-    <script type="text/javascript" src="https://oasisc-maker.github.io/Collaborative_Business_Writing/scormcontent/lib/player-0.0.11.min.js"></script>
-    <script type="text/javascript" src="https://oasisc-maker.github.io/Collaborative_Business_Writing/scormcontent/lib/lzwcompress.js"></script>
+    <link type="text/css" rel="stylesheet" href="lib/icomoon.css">
+    <script type="text/javascript" src="lib/player-0.0.11.min.js"></script>
+    <script type="text/javascript" src="lib/lzwcompress.js"></script>
 
     <!-- Resize Hack -->
     <script type="text/javascript">
@@ -54,7 +54,7 @@
                 var script = document.createElement('script')
                 script.onload = resolve
                 script.onerror = reject
-                script.src = 'https://oasisc-maker.github.io/Collaborative_Business_Writing/scormcontent/lib/' + manifest['.js'][idx]
+                script.src = 'lib/' + manifest['.js'][idx]
                 document.body.appendChild(script)
               }))
             }
@@ -112,7 +112,7 @@
             console.warn(`Could not load locale "${name}"`)
             name = window.i18n.available[0]
           }
-          const encoded = await __loadJsonp(`course:${name}`, `https://oasisc-maker.github.io/Collaborative_Business_Writing/scormcontent/locales/${name}.js`)
+          const encoded = await __loadJsonp(`course:${name}`, `locales/${name}.js`)
           const courseData = deserialize(encoded)
           return courseData
         }
@@ -511,11 +511,11 @@ function reportScore(score) {
 }
 
 function resolvePath(path) {
-  return ('https://oasisc-maker.github.io/Collaborative_Business_Writing/scormcontent/assets/').concat(path);
+  return ('assets/').concat(path);
 }
 
 function resolveFontPath(font) {
-  return ('https://oasisc-maker.github.io/Collaborative_Business_Writing/scormcontent/lib/fonts/').concat(font.key.split('/').reverse()[0]);
+  return ('lib/fonts/').concat(font.key.split('/').reverse()[0]);
 }
 
 function setLessonProgress(lessonProgress) {
